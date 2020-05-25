@@ -39,6 +39,8 @@
     />
   </head>
   <body>
+    <div><input type="text" id="name" /></div>
+
     <div class="editors">
       <div
         class="editor"
@@ -47,12 +49,12 @@
         [(froalaModel)]="editorContent"
       ></div>
 
-      <div
+      <!-- <div
         class="editor"
         id="editor2"
         [froalaEditor]
         [(froalaModel)]="editorContent"
-      ></div>
+      ></div> -->
     </div>
     <!-- Initialize the editor. -->
     <script type="text/javascript">
@@ -68,7 +70,7 @@
               //Adding Wave configuration
               var config = {
                 docId: "mydoc1",
-                username: "James",
+                username: document.getElementById("name"),
                 editor: editor1,
                 apiKey: "1311d3c7-ea19-4aac-b5c3-3f8589c9163f",
                 app: "froala",
@@ -81,7 +83,7 @@
       });
     </script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(function () {
         var codox2 = new Codox();
         window.codox2 = codox2;
@@ -104,6 +106,6 @@
           },
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
