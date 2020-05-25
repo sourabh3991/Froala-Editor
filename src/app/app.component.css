@@ -1,0 +1,12 @@
+.editors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.editor {
+  flex: 1 1 auto;
+  max-width: 80%;
+  height: 700px;
+  margin-right: 10px;
+}
