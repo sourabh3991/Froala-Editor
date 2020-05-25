@@ -39,23 +39,11 @@
     />
   </head>
   <body>
-    <div><input type="text" id="name" /></div>
+    <form>
+      <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+    </form>
 
-    <div class="editors">
-      <div
-        class="editor"
-        id="editor1"
-        [froalaEditor]
-        [(froalaModel)]="editorContent"
-      ></div>
-
-      <!-- <div
-        class="editor"
-        id="editor2"
-        [froalaEditor]
-        [(froalaModel)]="editorContent"
-      ></div> -->
-    </div>
     <!-- Initialize the editor. -->
     <script type="text/javascript">
       $(function () {
@@ -70,12 +58,13 @@
               //Adding Wave configuration
               var config = {
                 docId: Math.floor(Math.random() * 1000) + 1,
-                username: document.getElementById("name"),
+                username: "user" + Math.floor(Math.random() * 100) + 1,
                 editor: editor1,
                 apiKey: "1311d3c7-ea19-4aac-b5c3-3f8589c9163f",
                 app: "froala",
               };
               //start!
+
               codox1.init(config);
             },
           },
@@ -107,5 +96,21 @@
         });
       });
     </script> -->
+
+    <div class="editors">
+      <div
+        class="editor"
+        id="editor1"
+        [froalaEditor]
+        [(froalaModel)]="editorContent"
+      ></div>
+
+      <!-- <div
+        class="editor"
+        id="editor2"
+        [froalaEditor]
+        [(froalaModel)]="editorContent"
+      ></div> -->
+    </div>
   </body>
 </html>
